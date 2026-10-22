@@ -1,0 +1,185 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f8;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+.controls {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.controls label {
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #1e3a5f;
+}
+
+.buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e3a5f;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2d5d8c;
+}
+
+.reset-btn {
+    background-color: #777;
+}
+
+.reset-btn:hover {
+    background-color: #555;
+}
+
+.calendar-section {
+    padding: 0 25px 30px;
+}
+
+.calendar-section h2 {
+    text-align: center;
+    color: #1e3a5f;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 55px;
+    padding: 8px;
+}
+
+th {
+    background-color: #1e3a5f;
+    color: white;
+}
+
+td {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+td:not(.empty):hover {
+    background-color: #dce9f7;
+}
+
+.empty {
+    background-color: #f7f9fb;
+}
+
+#message {
+    color: #c0392b;
+    text-align: center;
+    margin-top: 15px;
+}
+
+footer {
+    background-color: #162c46;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        grid-column: 1;
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .calendar-section {
+        padding: 0 10px 20px;
+    }
+
+    th,
+    td {
+        height: 42px;
+        padding: 4px;
+        font-size: 13px;
+    }
+}
